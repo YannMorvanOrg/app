@@ -1,9 +1,10 @@
 name: Frontend Push
 
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["CI-CD Next.js"]
+    types:
+      - completed
 
 jobs:
   push-main:
